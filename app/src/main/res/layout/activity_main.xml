@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="robbyturnip333.gmail.com.belanja.MainActivity">
+
+
+        <EditText
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Nama"
+            android:inputType="textPersonName"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/nama"
+            android:layout_below="@+id/nama"
+            android:layout_marginTop="13dp"
+            android:background="@android:color/holo_red_light"
+            android:onClick="kurangNomor"
+            android:text="-"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/nama"
+            android:layout_alignTop="@+id/btn1"
+            android:background="@android:color/holo_green_light"
+            android:onClick="tambahNomor"
+            android:text="+"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tjum"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/btn2"
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="36sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btn1"
+            android:layout_below="@+id/btn1"
+            android:layout_marginTop="54dp">
+
+            <RadioButton
+                android:id="@+id/rbsmall"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1"
+                android:onClick="ukuranKue"
+                android:text="Small" />
+
+            <RadioButton
+                android:id="@+id/rbmedium"
+                android:layout_width="146dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:onClick="ukuranKue"
+                android:text="Medium" />
+
+            <RadioButton
+                android:id="@+id/rblarge"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:onClick="ukuranKue"
+                android:text="Large" />
+
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/cb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/cb1"
+            android:layout_below="@+id/cb1"
+            android:layout_marginTop="20dp"
+            android:onClick="isiTopping"
+            android:text="Keju" />
+
+        <CheckBox
+            android:id="@+id/cb3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/cb2"
+            android:layout_below="@+id/cb2"
+            android:layout_marginTop="20dp"
+            android:onClick="isiTopping"
+            android:text="Pisang" />
+
+        <CheckBox
+            android:id="@+id/cb4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/cb3"
+            android:layout_below="@+id/cb3"
+            android:layout_marginTop="20dp"
+            android:onClick="isiTopping"
+            android:text="Strawberry" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cb8"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="ORDER"
+            android:textColor="@android:color/white" />
+
+        <CheckBox
+            android:id="@+id/cb5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/cb1"
+            android:layout_alignBottom="@+id/cb1"
+            android:layout_alignStart="@+id/cb7"
+            android:onClick="isiTopping"
+            android:text="Oreo" />
+
+        <CheckBox
+            android:id="@+id/cb6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/cb3"
+            android:layout_alignStart="@+id/cb5"
+            android:onClick="isiTopping"
+            android:text="Kacang" />
+
+        <CheckBox
+            android:id="@+id/cb7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/cb4"
+            android:layout_alignStart="@+id/cb8"
+            android:onClick="isiTopping"
+            android:text="Jamur" />
+
+        <CheckBox
+            android:id="@+id/cb8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/cb4"
+            android:layout_alignBottom="@+id/cb4"
+            android:layout_toEndOf="@+id/btn3"
+            android:onClick="isiTopping"
+            android:text="Campur" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btn3"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="11dp"
+            android:text="Topping"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tjum"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="Size"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <CheckBox
+            android:id="@+id/cb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioGroup"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="70dp"
+            android:onClick="isiTopping"
+            android:text="Coklat" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/btn3"
+            android:layout_marginTop="20dp"
+            />
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
